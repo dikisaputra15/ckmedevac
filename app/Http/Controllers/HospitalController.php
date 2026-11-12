@@ -290,7 +290,7 @@ class HospitalController extends Controller
         $hospitals = $query->get();
          $levelCounts = [
             'National Hospital' => 0,
-            'District Hospital' => 0,
+            'Outer Island Hospital' => 0,
             'Clinic / Health Center' => 0,
         ];
 

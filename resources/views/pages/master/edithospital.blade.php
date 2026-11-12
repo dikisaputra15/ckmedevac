@@ -29,7 +29,7 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Edit Village</label>
+                <label>Edit Island Government</label>
                 <select class="form-control" name="province_id">
                     <?php
                         foreach ($provinces as $prov) {
@@ -69,8 +69,8 @@
                     <option value="National Hospital" {{ old('facility_level', $hospital->facility_level ?? '') == 'National Hospital' ? 'selected' : '' }}>
                          National Hospital
                     </option>
-                    <option value="District Hospital" {{ old('facility_level', $hospital->facility_level ?? '') == 'District Hospital' ? 'selected' : '' }}>
-                         District Hospital
+                    <option value="Outer Island Hospital" {{ old('facility_level', $hospital->facility_level ?? '') == 'Outer Island Hospital' ? 'selected' : '' }}>
+                         Outer Island Hospital
                     </option>
                     <option value="Clinic / Health Center" {{ old('facility_level', $hospital->facility_level ?? '') == 'Clinic / Health Center' ? 'selected' : '' }}>
                          Clinic / Health Center
@@ -116,7 +116,7 @@
                 @php
                     $icons = [
                         ['url' => 'https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png', 'label' => 'National Hospital'],
-                        ['url' => 'https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png', 'label' => 'District Hospital'],
+                        ['url' => 'https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png', 'label' => 'Outer Island Hospital'],
                         ['url' => 'https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png', 'label' => 'Clinic / Health Center'],
                     ];
                 @endphp

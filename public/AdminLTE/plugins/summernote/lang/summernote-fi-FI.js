@@ -124,8 +124,8 @@ var __webpack_exports__ = {};
         foreground: 'Tekstin väri',
         transparent: 'Läpinäkyvä',
         setTransparent: 'Aseta läpinäkyväksi',
-        reset: 'Samoata',
-        resetToDefault: 'Samoata oletusarvoksi'
+        reset: 'Cook Islandsta',
+        resetToDefault: 'Cook Islandsta oletusarvoksi'
       },
       shortcut: {
         shortcuts: 'Pikanäppäimet',

@@ -142,7 +142,7 @@
                     <p>
                         <strong>Address:</strong>
                         {{ $police->location }},
-                        {{ $province->provinces_region }}, Samoa
+                        {{ $province->provinces_region }}, Cook Islands
                     </p>
                     <p>
                         <strong>Latitude:</strong> {{ $police->latitude }}

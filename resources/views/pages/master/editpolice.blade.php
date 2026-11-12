@@ -22,7 +22,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Edit Village</label>
+                <label>Edit Island Government</label>
                 <select class="form-control" name="province_id">
                     <?php
                         foreach ($provinces as $prov) {
@@ -109,26 +109,37 @@
                     <label>National Police HQ</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'Local Police Outpost' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Police Station' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="Local Police Outpost"
+                        value="Police Station"
                         data-icon="{{ asset('images/Layer2.png') }}"
-                        {{ $police->category == 'Local Police Outpost' ? 'checked' : '' }}>
+                        {{ $police->category == 'Police Station' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer2.png') }}" width="16">
-                    <label>Local Police Outpost</label>
+                    <label>Police Station</label>
                 </div>
 
-                 <div class="form-check form-check-inline police-option {{ $police->category == 'Specialist Police Outpost' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Police Post' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="Specialist Police Outpost"
+                        value="Police Post"
                         data-icon="{{ asset('images/Layer3.png') }}"
-                        {{ $police->category == 'Specialist Police Outpost' ? 'checked' : '' }}>
+                        {{ $police->category == 'Police Post' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer3.png') }}" width="16">
-                    <label>Specialist Police Outpost</label>
+                    <label>Police Post</label>
+                </div>
+
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Specialized Unit' ? 'selected' : '' }}">
+                    <input class="form-check-input category-radio"
+                        type="radio"
+                        name="category"
+                        value="Specialized Unit"
+                        data-icon="{{ asset('images/Layer4.png') }}"
+                        {{ $police->category == 'Specialized Unit' ? 'checked' : '' }}>
+                    <img src="{{ asset('images/Layer4.png') }}" width="16">
+                    <label>Specialized Unit</label>
                 </div>
 
             </div>

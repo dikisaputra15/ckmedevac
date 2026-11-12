@@ -22,9 +22,9 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Village</label>
+                <label>Island Government</label>
                 <select class="form-control" name="province_id">
-                        <option value="0">-Choosse Village-</option>
+                        <option value="0">-Choosse Island Government-</option>
                     @foreach($provinces as $prov)
                         <option value="{{$prov->id}}">{{$prov->provinces_region}}</option>
                     @endforeach
@@ -59,8 +59,8 @@
                     <option value="National Hospital">
                         National Hospital
                     </option>
-                    <option value="District Hospital">
-                        District Hospital
+                    <option value="Outer Island Hospital">
+                        Outer Island Hospital
                     </option>
                     <option value="Clinic / Health Center">
                         Clinic / Health Center
@@ -99,7 +99,7 @@
             <div class="form-group">
                 <label>Icon</label>
                 <input type="radio" name="icon" value="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png"><img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png" style="width:24; height:24;"> National Hospital
-                <input type="radio" name="icon" value="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png"><img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png" style="width:24; height:24;"> District Hospital
+                <input type="radio" name="icon" value="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png"><img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png" style="width:24; height:24;"> Outer Island Hospital
                 <input type="radio" name="icon" value="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png"><img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:24; height:24;"> Clinic / Health Center
             </div>
         </div>
