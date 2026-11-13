@@ -1683,7 +1683,7 @@ document.addEventListener('change', function(e) {
     // --- Map Initialization ---
     const map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -21.2367, lng: -159.7777 },
-        zoom: 7,
+        zoom: 4,
         mapTypeId: 'roadmap',
         mapTypeControl: true,
         fullscreenControl: true,
