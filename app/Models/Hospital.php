@@ -9,5 +9,11 @@ class Hospital extends Model
 {
     use HasFactory;
 
+    public const FACILITY_LEVELS = [
+        'National Hospital',
+        'Outer Island Hospital',
+        'Clinic / Health Center',
+    ];
+
     protected $guarded = [];
 }

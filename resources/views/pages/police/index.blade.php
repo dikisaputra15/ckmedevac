@@ -224,23 +224,6 @@
             margin: 16px auto;
         }
 
-        #policeAreaLayerModal .image-modal-dialog {
-            max-width: 1660px;
-        }
-
-        #policeAreaLayerModal .police-area-layer-body {
-            padding: 0;
-            overflow: hidden;
-        }
-
-        #policeAreaLayerModal .police-area-layer-frame {
-            display: block;
-            width: 100%;
-            height: calc(100vh - 110px);
-            height: calc(100dvh - 110px);
-            border: 0;
-        }
-
         .image-modal-dialog .modal-content {
             max-height: calc(100vh - 32px);
             overflow: hidden;
@@ -352,10 +335,7 @@
         <div class="d-flex justify-content-between align-items-center gap-3 my-2">
 
             <div class="d-flex align-items-center gap-2">
-                <button class="btn btn-link p-0 fw-bold text-decoration-underline text-dark" data-bs-toggle="modal" data-bs-target="#disclaimerModal">
-                    <i class="bi bi-info-circle text-primary fs-5"></i>
-                    Disclaimer
-                </button>
+
             </div>
 
             <div class="d-flex align-items-center gap-3">
@@ -363,12 +343,20 @@
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police4Modal">
                     <img src="{{ asset('images/Layer1.png') }}" style="width:15px; height:15px;">
-                    <small>National Police HQ</small>
+                    <small>National Police (HQ)</small>
                 </button>
 
                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police3Modal">
                     <img src="{{ asset('images/Layer2.png') }}" style="width:15px; height:15px;">
-                    <small>Police Precint</small>
+                    <small>Police Station</small>
+                </button>
+                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police2Modal">
+                    <img src="{{ asset('images/Layer3.png') }}" style="width:15px; height:15px;">
+                    <small>Police Post</small>
+                </button>
+                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#police1Modal">
+                    <img src="{{ asset('images/Layer4.png') }}" style="width:15px; height:15px;">
+                    <small>Specialized Unit</small>
                 </button>
 
                 <button type="button" class="btn btn-danger d-flex flex-column align-items-center p-3 {{ request()->is('hospital') ? 'active' : '' }}"
@@ -390,147 +378,7 @@
 </div>
 
 
-<div class="modal fade" id="police1Modal" tabindex="-1" aria-labelledby="police1ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center gap-2">
-          <img src="{{ asset('images/Layer4.png') }}" alt="District Police Command" style="width:24px; height:24px; object-fit:contain;">
-          <h5 class="modal-title" id="police1ModalLabel">District Police Command / Police Station</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <p><strong>Command Level:</strong> Third-tier Territorial Police Command</p>
-        <p><strong>Typical Head Rank:</strong> Superintendent of Police (SP) or Inspector of Police (IP)</p>
-        <p><strong>Administrative Equivalent:</strong> District level</p>
-
-        <p>Supervises police operations within a district by directing police stations and subordinate units, coordinating patrol activities, maintaining public order, supporting criminal investigations, and ensuring effective delivery of policing services within their jurisdiction.</p>
-
-        <p class="mb-2"><strong>Responsibilities:</strong></p>
-        <ul>
-          <li>Command district-level police operations.</li>
-          <li>Supervise Police Station Commanders within the district.</li>
-          <li>Coordinate patrol, crime prevention, and law enforcement activities.</li>
-          <li>Direct responses to local emergencies and major incidents.</li>
-          <li>Allocate operational personnel and resources among police stations.</li>
-          <li>Monitor crime trends and operational performance within the district.</li>
-          <li>Coordinate policing with district administrations and community leaders.</li>
-          <li>Ensure implementation of provincial operational directives.</li>
-          <li>Prepare operational reports for the Provincial Police Commander (PPCs).</li>
-          <li>Support community policing and conflict-resolution initiatives.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="police2Modal" tabindex="-1" aria-labelledby="police2ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center gap-2">
-          <img src="{{ asset('images/Layer3.png') }}" alt="Provincial Police Command" style="width:24px; height:24px; object-fit:contain;">
-          <h5 class="modal-title" id="police2ModalLabel">Provincial Police Command (PPC)</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <p><strong>Command Level:</strong> Second-tier Territorial Police Command</p>
-        <p><strong>Typical Head Rank:</strong> Chief Superintendent of Police (CSP) or Superintendent of Police (SP)</p>
-        <p><strong>Administrative Equivalent:</strong> Provincial (or Metropolitan Command in the National Capital District and Lae) level</p>
-
-        <p>Commands all policing activities within a province or metropolitan area by directing district police commands, managing crime prevention and law enforcement operations, coordinating emergency responses, and implementing national policing policies at the provincial level.</p>
-
-        <p class="mb-2"><strong>Responsibilities:</strong></p>
-        <ul>
-          <li>Command all policing operations within a province.</li>
-          <li>Supervise District Police Commanders and Station Commanders.</li>
-          <li>Coordinate crime prevention, patrol, and public order operations.</li>
-          <li>Direct provincial criminal investigations and emergency responses.</li>
-          <li>Manage police personnel, logistics, and operational resources within the province.</li>
-          <li>Coordinate policing activities with provincial administrations and local authorities.</li>
-          <li>Monitor crime patterns and public safety issues.</li>
-          <li>Ensure compliance with national policing standards and operational procedures.</li>
-          <li>Prepare operational reports for the Divisional Police Commander.</li>
-          <li>Promote community policing and public engagement initiatives.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="police3Modal" tabindex="-1" aria-labelledby="police3ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center gap-2">
-          <img src="{{ asset('images/Layer2.png') }}" alt="Divisional Command" style="width:24px; height:24px; object-fit:contain;">
-          <h5 class="modal-title" id="police3ModalLabel">Police Precinct</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <p><strong>Command level:</strong> Lowest-level territorial command</p>
-        <p><strong>Typical Head Rank:</strong> Police Lieutenant</p>
-        <p><strong>Administrative Equivalent:</strong> Police Precinct/local police command</p>
-        <p><strong>Role:</strong> Precinct Commands are the local territorial policing unit responsible for delivering frontline police services within designated geographic jurisdictions.</p>
-        <p><strong>Function:</strong> Precinct Commands manage patrol officers and shifts, coordinate first-response policing, and maintain day-to-day public safety and police presence within the Precinct area.</p>
-        <p class="mb-2"><strong>Responsibilities:</strong></p>
-        <ul>
-          <li>Direct daily patrol operations within the Precinct jurisdiction.</li>
-          <li>Supervise patrol officers, shifts, and other assigned frontline personnel.</li>
-          <li>Allocate personnel and patrol resources according to local operational requirements.</li>
-          <li>Manage responses to emergency and non-emergency calls for service.</li>
-          <li>Monitor crime, disorder, traffic, and public-safety conditions within the Precinct.</li>
-          <li>Coordinate preliminary responses to incidents requiring specialized GPD services.</li>
-          <li>Maintain liaison with residents, businesses, community organizations, and local authorities.</li>
-          <li>Review incident, arrest, and other operational reports submitted by patrol personnel.</li>
-          <li>Implement GPD policies and operational directives at the Precinct level.</li>
-          <li>Report Precinct activities, incidents, personnel matters, and operational requirements through the Neighborhood Patrol District command.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="police4Modal" tabindex="-1" aria-labelledby="police4ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center gap-2">
-          <img src="{{ asset('images/Layer1.png') }}" alt="National Police HQ" style="width:24px; height:24px; object-fit:contain;">
-          <h5 class="modal-title" id="police4ModalLabel">National Police HQ</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <p><strong>Command level:</strong> Highest-level territorial command</p>
-        <p><strong>Typical Head Rank:</strong> Police Major</p>
-        <p><strong>Administrative Equivalent:</strong> Territorial policing bureau</p>
-        <p><strong>Role:</strong> The Patrol Operations Bureau is the principal departmental command responsible for organizing and overseeing GPD’s geographically based patrol operations throughout Cook Islands.</p>
-        <p>The Patrol Operations Bureau directs territorial patrol services, coordinates the neighborhood patrol districts and precinct commands, and ensures consistent delivery of frontline police services across the island.</p>
-        <p class="mb-2"><strong>Responsibilities:</strong></p>
-        <ul>
-          <li>Direct territorial patrol operations throughout Cook Islands.</li>
-          <li>Supervise the activities of the neighborhood patrol districts and precinct commands.</li>
-          <li>Establish patrol priorities and operational requirements for territorial policing.</li>
-          <li>Coordinate deployment of patrol personnel and resources according to operational needs.</li>
-          <li>Monitor emergency response and frontline police service delivery.</li>
-          <li>Manage major incidents requiring resources from multiple Precincts or districts.</li>
-          <li>Ensure implementation of department-wide policing policies at the territorial level.</li>
-          <li>Review operational reports, crime patterns, and patrol performance from subordinate commands.</li>
-          <li>Oversee territorial operations with specialized GPD bureaus and divisions.</li>
-          <li>Report territorial policing activities and operational requirements to the Police Commander.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+@include('components.classification-police-modals')
 
 <div class="modal fade" id="policeAreaLayerModal" tabindex="-1" aria-labelledby="policeAreaLayerLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered image-modal-dialog">
@@ -542,13 +390,13 @@
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body police-area-layer-body">
-        <iframe
-            class="police-area-layer-frame"
-            src="{{ asset('police-area-layer.html') }}"
-            title="Police Territorial Areas and Administrative Equivalents"
-            loading="lazy"
-        ></iframe>
+      <div class="modal-body p-4" style="overflow-y: auto;">
+        <ol class="mb-0 ps-4">
+          <li class="mb-3"><strong>Strategic Command</strong>: Encompasses the highest executive authority within the national security framework, consisting of the Minister of Police and the Commissioner. This level focuses on long-term law enforcement vision, national security policies, statutory legislative compliance, budgetary appropriations, and high-level inter-agency cooperation with regional Pacific security partners.</li>
+          <li class="mb-3"><strong>Headquarters Command</strong>: Represents the central operational and executive management engine of the CIPS, led by the Deputy Commissioner alongside senior executive advisers. Operating primarily from the Police Headquarters in Avarua, this command tier translates strategic government policy into actionable operational directives, manages internal affairs, coordinates force-wide administration, and oversees high-stakes critical incident responses.</li>
+          <li class="mb-3"><strong>Functional Command</strong>: Covers the specialized operational branches and technical wings of the police service, including the Crime Investigation Branch (CIB), Maritime Division, Tactical Support Unit (TSU), and Corporate Services. This command level provides domain-specific technical expertise, specialized investigative capabilities, border enforcement, and logistical backing to support general policing operations across the country.</li>
+          <li><strong>Territorial Command</strong>: Exercises geographical authority over frontline policing, station administration, and community law enforcement across specific geographic sectors, spanning Rarotonga and the dispersed islands of the Southern and Northern Groups (<em>Pa Enua</em>). Led by station and post commanders, this tier delivers direct 24/7 public safety services, executes general patrols, maintains local cellblock custody, and collaborates with island councils and traditional leaders (<em>Ariki</em>) to preserve local peace.</li>
+        </ol>
       </div>
     </div>
   </div>
@@ -565,14 +413,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body p-4" style="overflow-y: auto;">
-        <p>The GPD’s command flow follows a hierarchical structure from the Governor of Cook Islands as the civilian executive authority, through the Chief of Police and the Police Commander, to the Department’s operational and specialized bureaus. Under the Police Commander, the Patrol Operations Bureau directs the neighborhood patrol districts and their respective precinct commands, which in turn supervise frontline patrol officers and shifts. Specialized functions, including investigations, forensic services, highway patrol, and special operations, operate through their respective bureau and division chains while remaining integrated into the overall command structure. This arrangement enables strategic direction from the executive and headquarters levels to be translated into operational orders, specialized activities, and geographically focused frontline policing throughout Cook Islands.</p>
+        <p>The command flow of the <strong>Cook Islands Police Service (CIPS)</strong> operates along a strictly defined military-style hierarchical chain of command, descending from the Minister of Police at the political executive level to the Commissioner of Police as the statutory agency executive, through the Deputy Commissioner of Police as chief operational manager, down to divisional commanders, station officers, and frontline operational personnel. Routine operational directives, strategic orders, and administrative instructions flow vertically downward through this hierarchy to ensure unified command and operational discipline across all island jurisdictions.</p>
 
         <h6 class="fw-bold mt-4 mb-3">Reporting Relationships &mdash; Information Flows</h6>
         <ol class="mb-0 ps-4">
-          <li class="mb-3"><strong>Divisional Reporting:</strong> Precinct commands and patrol shifts report operational activities, incidents, and local policing matters through their respective neighborhood patrol districts and Patrol Operations Bureau chains to the Police Commander.</li>
-          <li class="mb-3"><strong>Specialized Case Reporting:</strong> Cases requiring specialized investigation, forensic examination, highway enforcement, or special operations are referred through the appropriate specialized division or bureau, with case information and operational results reported through their respective command chains.</li>
-          <li class="mb-3"><strong>Headquarters Reporting:</strong> Bureaus and divisions submit operational, personnel, administrative, and performance information through the Police Commander and Chief of Police to maintain department-wide coordination and oversight.</li>
-          <li><strong>Strategic and Administrative Reporting:</strong> The Chief of Police provides overall departmental reporting and administrative accountability to the Governor of Cook Islands, while strategic direction, policy, resources, and major administrative matters flow from the executive level through the GPD command structure.</li>
+          <li class="mb-3"><strong>Divisional Reporting:</strong> Channels daily operational data, shift occurrence logs, incident summaries, and frontline patrol activities from local beat officers, station watch desks, and outer island posts up to their respective divisional commanders. This information flow ensures that shift supervisors and regional commanders maintain real-time situational awareness across localized operational sectors, enabling rapid resource reallocation and operational adjustments when frontline incidents occur.</li>
+          <li class="mb-3"><strong>Specialized Case Reporting:</strong> Governs the transmission of sensitive investigative files, forensic evidence, narcotics interdiction intelligence, and transnational crime data directly between specialized units—such as the Crime Investigation Branch (CIB), Drug Detection Unit, and Transnational Crime Unit (TCU)—and executive police leadership. This streamlined, confidential information flow protects sensitive intelligence sources, ensures strict chain-of-custody protocols for court exhibits, and provides senior command with direct briefings on high-profile felony inquiries.</li>
+          <li class="mb-3"><strong>Headquarters Reporting:</strong> Synthesizes administrative, financial, human resource, fleet, and technical data from all operational and corporate branches into centralized executive management briefings. This internal reporting channel allows the Deputy Commissioner and support division heads to monitor nationwide force logistics, track station expenditure, manage personnel welfare, and maintain force-wide operational readiness across Rarotonga and the Outer Islands.</li>
+          <li><strong>Strategic and Administrative Reporting:</strong> Forms the external information bridge connecting the Commissioner to executive government oversight bodies, including the Minister of Police, Cabinet, Parliament, and the Office of the Ombudsman. This high-level flow encompasses annual departmental performance reports, budget submissions, statutory policy compliance documents, and major criminal threat assessments required for parliamentary oversight and legislative accountability.</li>
         </ol>
       </div>
     </div>
@@ -1246,7 +1094,6 @@ async function applyPoliceFilters() {
 
     if (policeName) filters.name = policeName;
     if (provs.length > 0) filters.provinces = provs;
-    if (categories.length > 0) filters.categories = categories;
 
     if (radius > 0 && lastClickedLocation) {
         filters.radius = radius;
@@ -1256,7 +1103,11 @@ async function applyPoliceFilters() {
 
     const result = await fetchPoliceData(filters);
 
-    const polices = result.polices;
+    const selectedCategories = new Set(categories.map(category => category.toLowerCase()));
+    const polices = (result.polices || []).filter(police =>
+        selectedCategories.size === 0 || (police.category || '').toLowerCase().split(',')
+            .some(category => selectedCategories.has(category.trim()))
+    );
     const categoryCounts = result.categoryCounts;
 
     addPoliceMarkers(polices);
@@ -1264,15 +1115,9 @@ async function applyPoliceFilters() {
     document.getElementById('totalCountDisplay').innerHTML =
         `<strong>Police:</strong> ${polices.length}`;
 
-    Object.keys(categoryCounts).forEach(cat => {
-
-        const id = cat.replace(/[^a-zA-Z0-9]/g,'-');
-
-        const el = document.getElementById(`count-${id}`);
-
-        if (el) {
-            el.textContent = categoryCounts[cat];
-        }
+    document.querySelectorAll('input[name="policeCategory"]').forEach(checkbox => {
+        checkbox.parentElement.querySelector('[data-police-category-count]').textContent =
+            categoryCounts?.[checkbox.value] || 0;
     });
 }
 
@@ -1335,18 +1180,7 @@ combinedPanelDiv.innerHTML = `
                     <option value="{{ $n }}">{{ $n }}</option>
                 @endforeach
             </select>
-            <label>Category:</label>
-            ${[
-                'National Police HQ',
-                'Police Station',
-                'Police Post',
-                'Specialized Unit',
-            ].map(c => `
-            <label style="display:block;font-size:13px;margin-bottom:5px;">
-                <input type="checkbox" name="policeCategory" value="${c}">
-                ${c} (<span id="count-${c.replace(/[^a-zA-Z0-9]/g,'-')}">0</span>)
-            </label>
-            `).join('')}
+            @include('components.police-category-filter')
             <hr>
             <div class="filter-box" id="provinceSelect">
                 <label class="filter-label">Province</label>

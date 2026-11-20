@@ -143,24 +143,16 @@ class PoliceController extends Controller
 
 
         // Execute the query and return JSON response
-       $polices = $query->get();
-        $categoryCounts = [
-            'National Police HQ' => 0,
-            'Police Station' => 0,
-            'Police Post' => 0,
-            'Specialized Unit' => 0,
-        ];
+        $polices = $query->get();
+        $categoryCounts = array_fill_keys(Police::CATEGORIES, 0);
+        $categoryLabels = array_combine(array_map('strtolower', Police::CATEGORIES), Police::CATEGORIES);
 
-       foreach ($polices as $police) {
-
-            if (empty($police->category)) {
-                continue;
-            }
-
-            $cat = trim($police->category);
-
-            if (isset($categoryCounts[$cat])) {
-                $categoryCounts[$cat]++;
+        foreach ($polices as $police) {
+            $categories = array_unique(array_map('trim', explode(',', strtolower($police->category ?? ''))));
+            foreach ($categories as $category) {
+                if (isset($categoryLabels[$category])) {
+                    $categoryCounts[$categoryLabels[$category]]++;
+                }
             }
         }
 

@@ -288,22 +288,13 @@ class HospitalController extends Controller
 
          // Execute the query and return JSON response
         $hospitals = $query->get();
-         $levelCounts = [
-            'National Hospital' => 0,
-            'Outer Island Hospital' => 0,
-            'Clinic / Health Center' => 0,
-        ];
+        $levelCounts = array_fill_keys(Hospital::FACILITY_LEVELS, 0);
+        $levelLabels = array_combine(array_map('strtolower', Hospital::FACILITY_LEVELS), Hospital::FACILITY_LEVELS);
 
         foreach ($hospitals as $hospital) {
-
-            if (empty($hospital->facility_level)) {
-                continue;
-            }
-
-            $level = trim($hospital->facility_level);
-
-            if (isset($levelCounts[$level])) {
-                $levelCounts[$level]++;
+            $level = strtolower(trim($hospital->facility_level ?? ''));
+            if (isset($levelLabels[$level])) {
+                $levelCounts[$levelLabels[$level]]++;
             }
         }
 
