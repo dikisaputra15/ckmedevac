@@ -1593,7 +1593,7 @@ async function applyHospitalFilters() {
 
     const result = await fetchHospitalData(filters);
 
-    const hospitals = result.hospitals;
+    const hospitals = result.hospitals || [];
     const levelCounts = result.levelCounts;
 
     const filteredHospitals = hospitals.filter(h => {
@@ -1609,7 +1609,7 @@ async function applyHospitalFilters() {
 
     document.querySelectorAll('input[name="hospitalLevel"]').forEach(checkbox => {
         checkbox.parentElement.querySelector('[data-hospital-level-count]').textContent =
-            levelCounts[checkbox.value] || 0;
+            levelCounts?.[checkbox.value] || 0;
     });
 }
 
@@ -2018,7 +2018,7 @@ setTimeout(() => {
 // Retry sampai badge level (di dalam combinedPanelDiv) benar-benar ada di DOM,
 // supaya jumlah per level tidak "nyangkut" di 0 saat load pertama.
 function initialApplyFilters() {
-    if (!document.querySelector('#filterPanel [id^="count-"]')) {
+    if (!document.querySelector('#filterPanel [data-hospital-level-count]')) {
         setTimeout(initialApplyFilters, 200);
         return;
     }
